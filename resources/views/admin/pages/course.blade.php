@@ -39,9 +39,8 @@
                       <label for="" class="col-md-4 col-lg-3 col-form-label">Titel</label>
                       <div class="col-md-8 col-lg-9">
                         <input name="titel" type="text" class="form-control" id="" value="">
-                      </div>
-                    </div>
-
+                     </div>
+                    </div>    
                     <div class="row mb-3">
                       <label for="" class="col-md-4 col-lg-3 col-form-label">Description</label>
                       <div class="col-md-8 col-lg-9">
