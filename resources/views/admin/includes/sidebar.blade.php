@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="{{url('dashboard')}}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -17,7 +17,7 @@
          
           <li>
             <a href="components-cards.html">
-              <i class="bi bi-circle"></i><span>User List</span>
+              <i class="bi bi-circle"></i><span>Pending User List</span>
             </a>
           </li>
          
@@ -71,7 +71,7 @@
 
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{url('pages-contact')}}">
+        <a class="nav-link collapsed" href="{{url('contact/show')}}">
           <i class="bi bi-envelope"></i>
           <span>Contact</span>
         </a>

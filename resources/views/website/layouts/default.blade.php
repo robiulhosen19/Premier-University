@@ -24,7 +24,17 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-9 d-none d-lg-block">
-            <p>APPLY ONLINE</p>
+          <div class="ml-auto">
+            <div class="social-wrap">
+                <a href="#"><span class="icon-facebook"></span></a>
+                <a href="#"><span class="icon-twitter"></span></a>
+                <a href="#"><span class="icon-linkedin"></span></a>
+
+                <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
+            </div>
+        </div>
+            <!-- <p>APPLY ONLINE</p> -->
+
           </div>
           <div class="col-lg-3 text-right">
             <a href="{{url('login')}}" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>

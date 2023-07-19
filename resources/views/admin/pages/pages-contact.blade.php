@@ -54,7 +54,7 @@
                                         <td>{{ $data->text}}</td>
                                         <td>
                                             <a href="#" class="btn btn-success" >Edit</a>
-                                            <a href="#" class="btn btn-danger" onclick="return confirm('Are You Sure!')">Delete</a>
+                                            <a href="{{ url('contact/delete/'.$data->id) }}" class="btn btn-danger" onclick="return confirm('Are You Sure!')">Delete</a>
                                         </td>
                                     
 

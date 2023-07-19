@@ -27,7 +27,7 @@
 
     <div class="site-section">
         <div class="container">
-            <form action="{{url('contact/store')}}" method="post">      
+            <form action="{{url('contacts/store')}}" method="post">      
                     <div class="row">      
                         <div class="col-md-6 form-group">
                             <label for="fname">First Name</label>

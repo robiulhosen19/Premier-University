@@ -27,20 +27,19 @@
                     <li>
                         <a href="{{ url('contacts')}}" class="nav-link text-left">Contact</a>
                     </li>
+                    <li class="has-children">
+                        <a href="about.html" class="nav-link text-left">User Name</a>
+                        <ul class="dropdown">
+                            <li><a href="{{url('profile')}}">Profile</a></li>
+                            <li><a href="{{ url('about')}}">Logout</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 </ul>
             </nav>
 
         </div>
-        <div class="ml-auto">
-            <div class="social-wrap">
-                <a href="#"><span class="icon-facebook"></span></a>
-                <a href="#"><span class="icon-twitter"></span></a>
-                <a href="#"><span class="icon-linkedin"></span></a>
-
-                <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
-            </div>
-        </div>
+        
 
     </div>
 </div>

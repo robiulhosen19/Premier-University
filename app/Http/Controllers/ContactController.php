@@ -1,66 +1,41 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Contact;
-use App\Http\Requests\StoreContactRequest;
-use App\Http\Requests\UpdateContactRequest;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(){
+        return view('website.pages.contact ');
+    }
+    public function store(Request $request)
     {
-        //
+        $obj = new Contact();
+        $obj->first_name = $request->first_name;
+        $obj->last_name = $request->last_name;
+        $obj->email = $request->email;
+        $obj->phone = $request->number;
+        $obj->text = $request->text;
+        if($obj->save());
+        Session::flash('msg', 'successfully inserted');
+        return redirect()->back();
+           
+        
+    }
+    public function show()  {
+
+        $show = Contact::All();
+        return view('admin.pages.pages-contact',compact('show'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreContactRequest $request)
-    {
-        //
-    }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateContactRequest $request, Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Contact $contact)
-    {
-        //
+    public function delete($id){
+        $obj = Contact::find($id);
+        $obj->delete();
+        Session()->flash('msg', 'successfully Deleted');
+        return redirect()->back();
     }
 }
