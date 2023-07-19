@@ -1,3 +1,4 @@
+@if(Session()->has('user_role') && Session()->get('user_role') == 'Admin')
 <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
@@ -94,3 +95,4 @@
     </ul>
 
   </aside>
+  @endif
