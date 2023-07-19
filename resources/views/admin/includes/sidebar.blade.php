@@ -16,7 +16,7 @@
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
          
           <li>
-            <a href="components-cards.html">
+            <a href="{{url('admin/pending-users')}}">
               <i class="bi bi-circle"></i><span>Pending User List</span>
             </a>
           </li>
@@ -78,14 +78,14 @@
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
+        <a class="nav-link collapsed" href="{{url('teacher-register')}}">
           <i class="bi bi-card-list"></i>
           <span>Register</span>
         </a>
       </li><!-- End Register Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
+        <a class="nav-link collapsed" href="{{url('login')}}">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Login</span>
         </a>

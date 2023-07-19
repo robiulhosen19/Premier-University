@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,32 +36,30 @@ Route::get('course', [WebsiteController::class, 'course']);
 Route::get('contacts', [ContactController::class, 'index']);
 Route::post('contacts/store', [ContactController::class, 'store']);
 Route::get('contact/show', [ContactController::class, 'show']);
-Route::get('contact/delete/{id}',[ContactController::class, 'delete']);
-
-
-
-
-Route::get('/login', function () {
-    return view('website/pages/login');
-});
-Route::get('/register', function () {
-    return view('website/pages/register');
-});
-
-
-
-// __________________admin Route______________
-Route::get('dashboard', [AdminController::class, 'dashboard']);
-Route::get('profile', [AdminController::class, 'profile']);
-
+Route::get('contact/delete/{id}', [ContactController::class, 'delete']);
 
 // __________course________
 
 Route::get('course', [CourseController::class, 'course']);
 Route::get('course', [CourseController::class, 'show']);
-Route::get('course/create',[CourseController::class, 'create']);
-Route::post('course/store',[CourseController::class, 'store']);
+Route::get('course/create', [CourseController::class, 'create']);
+Route::post('course/store', [CourseController::class, 'store']);
 
 // __________Admin / Contact ROute ________
 
 
+Route::middleware(['isCheckLogin'])->group(function () {
+    // Routes that use the custom middleware
+    // __________________admin Route______________
+    Route::get('dashboard', [AdminController::class, 'dashboard']);
+    Route::get('profile', [AdminController::class, 'profile']);
+
+    // ----------Log Out Session-----------
+    Route::get('logout', [AuthController::class, 'logout']);
+
+    Route::middleware(['isCheckAdmin'])->group(function () {
+        // ----------Users Routes-----------
+        Route::get('admin/pending-users', [UserController::class, 'pendingUsers']);
+        Route::get('admin/approve-user/{userid}', [UserController::class, 'approveUser']);
+    });
+});
