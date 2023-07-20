@@ -50,12 +50,10 @@ Route::post('course/store', [CourseController::class, 'store']);
 
 Route::middleware(['isCheckLogin'])->group(function () {
     // Routes that use the custom middleware
+
     // __________________admin Route______________
     Route::get('dashboard', [AdminController::class, 'dashboard']);
     Route::get('profile', [AdminController::class, 'profile']);
-
-    // ----------Log Out Session-----------
-    Route::get('logout', [AuthController::class, 'logout']);
 
     Route::middleware(['isCheckAdmin'])->group(function () {
         // ----------Users Routes-----------

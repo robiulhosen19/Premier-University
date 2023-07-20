@@ -1,6 +1,6 @@
 @extends('admin/layouts/default')
 @section('content')
-
+@if(Session()->has('user_role') && Session()->get('user_role') != 'Student')
   <main id="main" class="main">
 
     <div class="pagetitle">
@@ -17,7 +17,7 @@
       <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg-8">
+        <div class="col-lg-12">
           <div class="row">
 
             <!-- Sales Card -->
@@ -289,50 +289,10 @@
         </div><!-- End Left side columns -->
 
         <!-- Right side columns -->
-        <div class="col-lg-4">
-
-          <!-- End activity item-->
-
-                <div class="activity-item d-flex">
-                  <div class="activite-label">2 hrs</div>
-                  <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
-                  <div class="activity-content">
-                    Voluptates corrupti molestias voluptatem
-                  </div>
-                </div><!-- End activity item-->
-
-                <div class="activity-item d-flex">
-                  <div class="activite-label">1 day</div>
-                  <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
-                  <div class="activity-content">
-                    Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
-                  </div>
-                </div><!-- End activity item-->
-
-                <div class="activity-item d-flex">
-                  <div class="activite-label">2 days</div>
-                  <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
-                  <div class="activity-content">
-                    Est sit eum reiciendis exercitationem
-                  </div>
-                </div><!-- End activity item-->
-
-                <div class="activity-item d-flex">
-                  <div class="activite-label">4 weeks</div>
-                  <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
-                  <div class="activity-content">
-                    Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
-                  </div>
-                </div><!-- End activity item-->
-
-              </div>
-
-            </div>
-          </div><!-- End Recent Activity -->
-        </div><!-- End Right side columns -->
+       
       </div>
     </section>
   </main><!-- End #main -->
 
-
+@endif
   @endsection

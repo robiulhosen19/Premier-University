@@ -14,8 +14,8 @@
                     <li class="has-children">
                         <a href="about.html" class="nav-link text-left">About Us</a>
                         <ul class="dropdown">
-                            <li><a href="{{ url('teacher')}}">Our Teachers</a></li>
-                            <li><a href="{{ url('about')}}">Our School</a></li>
+                            <li><a href="{{ url('about')}}">About-Us</a></li>
+                            <li><a href="{{ url('contacts')}}">Contact</a></li>
                         </ul>
                     </li>
                     <li>
@@ -24,19 +24,18 @@
                     <li>
                         <a href="{{ url('course')}}" class="nav-link text-left">Courses</a>
                     </li>
-                    <li>
-                        <a href="{{ url('contacts')}}" class="nav-link text-left">Contact</a>
-                    </li>
+                    @if(Session()->has('user_role') && Session()->get('user_role') != 'Student')
                     <li class="has-children">
-                        <a href="about.html" class="nav-link text-left">{{Session::get('user_fname')}} {{Session::get('user_lname')}}</a>
+                        <a href="" class="nav-link text-left">{{Session::get('user_fname')}} {{Session::get('user_lname')}}</a>
                         <ul class="dropdown">
                             <li><a href="{{url('profile')}}">Profile</a></li>
                             @if(Session()->has('user_role') && Session()->get('user_role') == 'Admin')
                             <li><a href="{{url('dashboard')}}">Dashboard</a></li>
                             @endif
-                            <li><a href="{{ url('login')}}">Logout</a></li>
+                            <li><a href="{{ url('user-logout')}}">Logout</a></li>
                         </ul>
                     </li>
+                    @endif
                 </ul>
                 </ul>
             </nav>

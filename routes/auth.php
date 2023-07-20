@@ -28,3 +28,12 @@ Route::post('teacher-registration', [AuthController::class, 'registrationTeacher
 
 Route::get('student-register', [AuthController::class, 'studentRegister']);
 Route::post('student-registration', [AuthController::class, 'registrationStudent']);
+
+
+Route::middleware(['isCheckLogin'])->group(function () {
+    // Routes that use the custom middleware
+
+    // ----------Log Out Session-----------
+    Route::get('user-logout', [AuthController::class, 'logout']);
+
+});

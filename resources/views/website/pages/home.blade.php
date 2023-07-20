@@ -57,8 +57,7 @@
               </div>
               <div class="feature-1-content">
                 <h2>The Computer Labs</h2>
-                <p>The university has several state-of-art computer labs with more than 500 personal computers. These labs are staffed by professional systems managers and lab assistants. The students can utilize computer as part of supervised classes by instructors and/or on their own to complete assignments of related courses.
-</p>
+                <p>The university has several state-of-art computer labs with more than 500 personal computers. These labs are staffed by professional systems managers and lab assistants. The students can utilize computer as part of supervised and/or on their own of related courses.</p>
                 <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
               </div>
             </div> 
@@ -70,7 +69,7 @@
               </div>
               <div class="feature-1-content">
                 <h2>Classrooms & Laboratories</h2>
-                <p>Classroom and laboratory facilities are also of high standard and quality. Classrooms and labs are well equipped with AC, fixed multimedia projectors, and all other modern and necessary educational instruments and appliances.</p>
+                <p>Classroom and laboratory facilities are also of high standard and quality. Classrooms and labs are well equipped with AC, fixed multimedia educational managers and projectors, and all other modern and necessary educational instruments and appliances.</p>
                 <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
               </div>
             </div> 
@@ -150,7 +149,7 @@
               </div>
             </div>
             <div>
-              <p>&ldquo;Premier University at Chittagong,Bangladesh,has been established at the beginning of the millennium.Though not very old, it has gained renown as one of the best universities in Bangladesh. In our knowledge-based era, Premier University is contributing immensely to the socio-economic development process in Bangladesh through its quality teaching and research. It has six faculties : Arts, Business Studies, Engineering, Science, Law and Social Science. These faculties have been producing brilliant professionals and academics who are adding both quantitatively & qualitatively great values to the larger society.
+              <p >&ldquo;Premier University at Chittagong,Bangladesh,has been established at the beginning of the millennium.Though not very old, it has gained renown as one of the best universities in Bangladesh. In our knowledge-based era, Premier University is contributing immensely to the socio-economic development process in Bangladesh through its quality teaching and research. It has six faculties : Arts, Business Studies, Engineering, Science, Law and Social Science. These faculties have been producing brilliant professionals and academics who are adding both quantitatively & qualitatively great values to the larger society.
 
 This website will give you an overview why Premier University has acquired international reputation as a center for higher learning. I hope when you visit Premier University in person or online, you will enjoy your experience with us.
 
@@ -253,7 +252,7 @@ This website will give you an overview why Premier University has acquired inter
       </div>
     </div>
     
-    <div class="news-updates">
+    <!-- <div class="news-updates">
       <div class="container">
          
         <div class="row">
@@ -317,7 +316,53 @@ This website will give you an overview why Premier University has acquired inter
           </div>
         </div>
       </div>
+    </div> -->
+
+    <!-- Contact page---------- -->
+
+    <div class="site-section">
+        <div class="container">
+ @if(Session::has('msg'))
+            <p class="alert alert-success" role="alert">{{Session::get('msg')}}</p>
+
+        @endif
+
+            <form action="{{url('contacts/store')}}" method="post">  
+                @csrf    
+                    <div class="row">      
+                        <div class="col-md-6 form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" class="form-control form-control-lg" name="first_name">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" class="form-control form-control-lg" name="last_name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="eaddress">Email Address</label>
+                            <input type="email" id="eaddress" class="form-control form-control-lg" name="email"> 
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="tel">Tel. Number</label>
+                            <input type="text" id="tel" class="form-control form-control-lg" name="number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="message">Message</label>
+                            <textarea name="" id="message" cols="30" rows="10" class="form-control" name="text"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="submit" value="Send Message" class="btn btn-primary btn-lg px-5">
+                        </div>
+                    </div>
+            </form>
+        </div>
     </div>
 
-    
 @endsection

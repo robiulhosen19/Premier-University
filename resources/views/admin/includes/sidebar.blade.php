@@ -1,4 +1,4 @@
-@if(Session()->has('user_role') && Session()->get('user_role') == 'Admin')
+@if(Session()->has('user_role') && Session()->get('user_role') != 'Student')
 <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">

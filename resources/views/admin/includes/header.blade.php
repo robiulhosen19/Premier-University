@@ -28,7 +28,7 @@
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
                         <h6>{{Session::get('user_fname')}} {{Session::get('user_lname')}}</h6>
-                        <span>Web Designer</span>
+                        <span>{{Session::get('user_role')}}</span>
                     </li>
                     <li>
                         <hr class="dropdown-divider">
@@ -57,7 +57,7 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="{{url('login')}}">
+                        <a class="dropdown-item d-flex align-items-center" href="{{url('user-logout')}}">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sign Out</span>
                         </a>

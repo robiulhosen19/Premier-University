@@ -20,14 +20,17 @@
         <span class="current">Contact</span>
       </div>
     </div>
-        @if(Session::has('msg'))
+       
+
+    <div class="site-section">
+        <div class="container">
+ @if(Session::has('msg'))
             <p class="alert alert-success" role="alert">{{Session::get('msg')}}</p>
 
         @endif
 
-    <div class="site-section">
-        <div class="container">
-            <form action="{{url('contacts/store')}}" method="post">      
+            <form action="{{url('contacts/store')}}" method="post">  
+                @csrf    
                     <div class="row">      
                         <div class="col-md-6 form-group">
                             <label for="fname">First Name</label>
