@@ -80,7 +80,7 @@
 
 <!-- -------- courses ----------- -->
 
-    <div class="site-section">
+    <!-- <div class="site-section">
       <div class="container">
         <div class="row mb-5 justify-content-center text-center">
           <div class="col-lg-6 mb-5">
@@ -108,7 +108,7 @@
           </div>
         </div> 
       </div>
-    </div>
+    </div> -->
 
     <div class="section-bg style-1" style="background-image: url('assets/website/images/about_1.jpg'); ">
       <div class="container">
@@ -149,78 +149,15 @@
               </div>
             </div>
             <div>
-              <p >&ldquo;Premier University at Chittagong,Bangladesh,has been established at the beginning of the millennium.Though not very old, it has gained renown as one of the best universities in Bangladesh. In our knowledge-based era, Premier University is contributing immensely to the socio-economic development process in Bangladesh through its quality teaching and research. It has six faculties : Arts, Business Studies, Engineering, Science, Law and Social Science. These faculties have been producing brilliant professionals and academics who are adding both quantitatively & qualitatively great values to the larger society.
-
-This website will give you an overview why Premier University has acquired international reputation as a center for higher learning. I hope when you visit Premier University in person or online, you will enjoy your experience with us.
-
-&rdquo;</p>
+              <p >&ldquo;Premier University at Chittagong,Bangladesh,has been established at the beginning of the millennium.Though not very old, 
+                it has gained renown as one of the best universities in Bangladesh. In our knowledge-based era, Premier University is contributing
+                immensely to the socio-economic development process in Bangladesh through its quality teaching and research. It has six faculties : Arts,
+                Business Studies, Engineering, Science, Law and Social Science. These faculties have been producing brilliant professionals and
+                academics who are adding both quantitatively & qualitatively great values to the larger society.
+                This website will give you an overview.
+              &rdquo;</p>
             </div>
           </div>
-
-          <!-- <div class="ftco-testimonial-1">
-            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
-              <img src="assets/website/images/person_2.jpg" alt="Image" class="img-fluid mr-3">
-              <div>
-                <h3>Allison Holmes</h3>
-                <span>Designer</span>
-              </div>
-            </div>
-            <div>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!</p>
-            </div>
-          </div>
-
-          <div class="ftco-testimonial-1">
-            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
-              <img src="assets/website/images/person_4.jpg" alt="Image" class="img-fluid mr-3">
-              <div>
-                <h3>Allison Holmes</h3>
-                <span>Designer</span>
-              </div>
-            </div>
-            <div>
-              <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!&rdquo;</p>
-            </div>
-          </div>
-
-          <div class="ftco-testimonial-1">
-            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
-              <img src="assets/website/images/person_3.jpg" alt="Image" class="img-fluid mr-3">
-              <div>
-                <h3>Allison Holmes</h3>
-                <span>Designer</span>
-              </div>
-            </div>
-            <div>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!</p>
-            </div>
-          </div>
-
-          <div class="ftco-testimonial-1">
-            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
-              <img src="assets/website/images/person_2.jpg" alt="Image" class="img-fluid mr-3">
-              <div>
-                <h3>Allison Holmes</h3>
-                <span>Designer</span>
-              </div>
-            </div>
-            <div>
-              <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!&rdquo;</p>
-            </div>
-          </div>
-
-          <div class="ftco-testimonial-1">
-            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
-              <img src="assets/website/images/person_4.jpg" alt="Image" class="img-fluid mr-3">
-              <div>
-                <h3>Allison Holmes</h3>
-                <span>Designer</span>
-              </div>
-            </div>
-            <div>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!</p>
-            </div>
-          </div> -->
 
         </div>
         
@@ -228,7 +165,7 @@ This website will give you an overview why Premier University has acquired inter
     </div>
     
 
-    <div class="section-bg style-1" style="background-image: url('assets/website/images/hero_1.jpg'); ">
+    <!-- <div class="section-bg style-1" style="background-image: url('assets/website/images/hero_1.jpg'); ">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
@@ -250,7 +187,7 @@ This website will give you an overview why Premier University has acquired inter
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     
     <!-- <div class="news-updates">
       <div class="container">
@@ -320,9 +257,9 @@ This website will give you an overview why Premier University has acquired inter
 
     <!-- Contact page---------- -->
 
-    <div class="site-section">
+    <!-- <div class="site-section">
         <div class="container">
- @if(Session::has('msg'))
+        @if(Session::has('msg'))
             <p class="alert alert-success" role="alert">{{Session::get('msg')}}</p>
 
         @endif
@@ -363,6 +300,6 @@ This website will give you an overview why Premier University has acquired inter
                     </div>
             </form>
         </div>
-    </div>
+    </div> -->
 
 @endsection

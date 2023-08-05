@@ -31,7 +31,7 @@ class AuthController extends Controller
                 Session()->put('user_lname', $user->last_name);
                 Session()->put('user_email', $user->email);
                 Session()->put('user_role', $user->role);
-                return redirect('dashboard');
+                return redirect('home');
             } else {
                 return redirect()->back()->with('error', 'User Not Approved Yet');
             }
