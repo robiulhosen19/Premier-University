@@ -14,4 +14,4 @@
   <link rel="stylesheet" href="{{ asset('assets/website/css/aos.css')}}">
   <link href="{{ asset('assets/website/css/jquery.mb.YTPlayer.min.css')}}" media="all" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="assets/website/css/style.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

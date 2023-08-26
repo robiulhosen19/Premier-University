@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdmissionController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +28,16 @@ Route::get('/', function () {
 
 
 Route::get('home', [WebsiteController::class, 'home']);
-Route::get('admission', [WebsiteController::class, 'admission']);
+
 Route::get('about', [WebsiteController::class, 'about']);
 Route::get('course', [WebsiteController::class, 'course']);
+
+
+// _______________this is website route_____________
+Route::get('admission', [WebsiteController::class, 'admission']);
+Route::get('admission', [AdmissionController::class, 'create']);
+
+
 
 
 // __________Contact ROute ________

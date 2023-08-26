@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocationController;
+use App\Http\Controllers\AdmissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('programs/{id}',[LocationController::class, 'getProgram']);
+Route::post('admission-store',[AdmissionController::class, 'getstore']);
+// Route::get('divisions',[LocationController::class, 'getDivisions']);

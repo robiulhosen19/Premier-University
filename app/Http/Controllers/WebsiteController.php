@@ -12,7 +12,7 @@ class WebsiteController extends Controller
     }
 
     public function admission() {
-        return view('website.pages.admission');
+        return view('website.pages.admissions.create');
         
     }
 
