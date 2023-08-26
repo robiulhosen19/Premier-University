@@ -22,5 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('programs/{id}',[LocationController::class, 'getProgram']);
-Route::post('admission-store',[AdmissionController::class, 'getstore']);
-// Route::get('divisions',[LocationController::class, 'getDivisions']);
+Route::post('admission',[AdmissionController::class, 'store']);

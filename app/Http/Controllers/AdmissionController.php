@@ -14,7 +14,7 @@ class AdmissionController extends Controller
 
         return view('website.pages.admissions.create', compact('depart'));
     }
-    public function getstore(request $req){
+    public function store(request $req){
         $obj = new Admission();
         
         $obj->  department_id= $req->department;

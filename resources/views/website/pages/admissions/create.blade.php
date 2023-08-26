@@ -280,9 +280,9 @@
 
             });
         })
-        $('#add_mission').submit(function(e) {
+        $("#add_mission").submit(function(e) {
             e.preventDefault();
-            //alert('Submitted');
+            //alert($("#first_name").val());
             var  department  =$("#department").val();
             var  program =$("#program").val();
             var  first_name  =$("#first_name").val();
@@ -316,7 +316,7 @@
             var  transaction =$("#transaction").val();
 
             $.ajax({
-                url: 'http://127.0.0.1:8000/api/program-store',
+                url: 'http://127.0.0.1:8000/api/admission',
                 datatype: "json",
                 type: 'post',
                 data: {
@@ -354,7 +354,7 @@
                 },
                 success: function(res) {
                     console.log(res);
-                    $('#emp_form')[0].reset();
+                    $('#add_mission')[0].reset();
                 }
             })
         });
