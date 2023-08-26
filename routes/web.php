@@ -68,5 +68,8 @@ Route::middleware(['isCheckLogin'])->group(function () {
         // ----------Users Routes-----------
         Route::get('admin/pending-users', [UserController::class, 'pendingUsers']);
         Route::get('admin/approve-user/{userid}', [UserController::class, 'approveUser']);
+        Route::get('admin/student_from', [AdmissionController::class, 'from_show']);
+        Route::get('admin/student_info', [AdmissionController::class, 'from_info']);
+
     });
 });

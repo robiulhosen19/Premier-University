@@ -49,8 +49,13 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ url('admin/student_from' )}}">
               <i class="bi bi-circle"></i><span>Student Form</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url('admin/student_info' )}}">
+              <i class="bi bi-circle"></i><span>Student Information</span>
             </a>
           </li>
           

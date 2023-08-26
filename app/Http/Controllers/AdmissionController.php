@@ -58,5 +58,18 @@ class AdmissionController extends Controller
 
         }
     }
-   
+   public function from_show(){
+
+    $student_from = Admission::all();
+    return view('admin.pages.student_from', compact('student_from'));
+
+
+ }
+    public function from_info(){
+
+    $student_from = Admission::all();
+    return view('admin.pages.student_info', compact('student_from'));
+
+
+ }
 }
